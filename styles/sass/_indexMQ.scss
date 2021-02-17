@@ -16,53 +16,53 @@
 //Formatting for index.html at viewport 880px width
 @media(max-width: 880px){
     nav{
-        .fa-bars,
-        label,
-        input{
-            display: block;
-        }
-        //Slideout menu formatting
-        .slideOutMenu {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background: rgba(12, 20, 35, 0.8);
-            position: fixed;
-            top: 0;
-            right: -35%;
-            width: 35%;
-            height: 100vh;
-            z-index: 15;
-            transition: all 1s ease;
-        }
-        //Styles for the Slideout menu links
-        .slideOutMenu a {
-            color: $white;
-            font-size: 3rem;
-            border-bottom: 2px solid $white;
-            display: block;
-            padding: 20px;
-            transition: all 0.5s ease-in-out;
-        }
-        .slideOutMenu a:hover,
-        .slideOutMenu a:focus {
-            background: $robinBlue;
-            color: $darkBlueGrey;
-        }
-        input[type="checkbox"]:checked + .slideOutMenu {
-            right: 0;
-        }
-        input[type="checkbox"] {
-            visibility: hidden;
-        }
-        label[for="toggle"] {
-            position: fixed;
-            color: $white;
-            top: 20px;
-            left: 20px;
-            z-index: 15;
-            cursor: pointer;
-        }          
+        // .fa-bars,
+        // label,
+        // input{
+        //     display: block;
+        // }
+        // //Slideout menu formatting
+        // .slideOutMenu {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: flex-start;
+        //     background: rgba(12, 20, 35, 0.8);
+        //     position: fixed;
+        //     top: 0;
+        //     right: -35%;
+        //     width: 35%;
+        //     height: 100vh;
+        //     z-index: 15;
+        //     transition: all 1s ease;
+        // }
+        // //Styles for the Slideout menu links
+        // .slideOutMenu a {
+        //     color: $white;
+        //     font-size: 3rem;
+        //     border-bottom: 2px solid $white;
+        //     display: block;
+        //     padding: 20px;
+        //     transition: all 0.5s ease-in-out;
+        // }
+        // .slideOutMenu a:hover,
+        // .slideOutMenu a:focus {
+        //     background: $robinBlue;
+        //     color: $darkBlueGrey;
+        // }
+        // input[type="checkbox"]:checked + .slideOutMenu {
+        //     right: 0;
+        // }
+        // input[type="checkbox"] {
+        //     visibility: hidden;
+        // }
+        // label[for="toggle"] {
+        //     position: fixed;
+        //     color: $white;
+        //     top: 20px;
+        //     left: 20px;
+        //     z-index: 15;
+        //     cursor: pointer;
+        // }          
     }
 
     //Adjusting container for goldFish Image

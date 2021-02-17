@@ -1107,60 +1107,6 @@ h1 {
 }
 
 @media (max-width: 880px) {
-  nav .fa-bars,
-  nav label,
-  nav input {
-    display: block;
-  }
-  nav .slideOutMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    background: rgba(12, 20, 35, 0.8);
-    position: fixed;
-    top: 0;
-    right: -35%;
-    width: 35%;
-    height: 100vh;
-    z-index: 15;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-  }
-  nav .slideOutMenu a {
-    color: #FFFFFF;
-    font-size: 3rem;
-    border-bottom: 2px solid #FFFFFF;
-    display: block;
-    padding: 20px;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-  nav .slideOutMenu a:hover,
-  nav .slideOutMenu a:focus {
-    background: #86E0F9;
-    color: #0C1423;
-  }
-  nav input[type="checkbox"]:checked + .slideOutMenu {
-    right: 0;
-  }
-  nav input[type="checkbox"] {
-    visibility: hidden;
-  }
-  nav label[for="toggle"] {
-    position: fixed;
-    color: #FFFFFF;
-    top: 20px;
-    left: 20px;
-    z-index: 15;
-    cursor: pointer;
-  }
   .goldfishContainer {
     width: 45%;
   }
@@ -1520,4 +1466,108 @@ h1 {
   .contactFormProps textarea {
     padding: 10px 12px;
   }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FFFFFF;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 880px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .navLinks {
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    height: 50vh;
+    top: 0;
+    background: rgba(12, 20, 35, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    padding: 20px;
+  }
+  .navLinks li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.navActive {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
 }
